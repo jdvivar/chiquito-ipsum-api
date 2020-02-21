@@ -116,7 +116,6 @@ function getChiquitoIpsum (options) {
   const bagOfWords = options.mode === 'latin' ? latinArray : chiquitoArray
   const paras = options.paras || 1
 
-  console.log('getChiquitoIpsum', paras, options.mode)
   return generateFullText.bind(paragraphNumber = paras)(bagOfWords)
 }
 
