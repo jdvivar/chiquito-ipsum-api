@@ -1,0 +1,19 @@
+{
+  "name": "chiquito-ipsum-api",
+  "version": "1.0.0",
+  "description": "Chiquito ipsum api",
+  "main": "index.js",
+  "scripts": {
+    "start": "node index.js",
+    "lint": "standard"
+  },
+  "keywords": [],
+  "author": "Daniel Vivar (http://www.danielvivar.com)",
+  "license": "MIT",
+  "dependencies": {
+    "express": "^4.17.1"
+  },
+  "devDependencies": {
+    "standard": "^14.3.1"
+  }
+}
