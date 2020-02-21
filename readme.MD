@@ -9,7 +9,7 @@ This ultra simple API is based on the work found at http://www.chiquitoipsum.com
 Parameters | default | description
 -----------|---------|------------
 (optional) paragraphs |1        | How many paragraphs you need
-(optional) mode |`default`        | `default` for regular chiquito style and `latin` for the a closer lorem ipsum version∏
+(optional) mode |`default`        | `default` for regular chiquito style and `latin` for the a closer lorem ipsum version
 
 ### Examples
 
