@@ -1,6 +1,7 @@
 const express = require('express')
 const app = express()
-const port = 80
+
+app.set('port', (process.env.PORT || 8080));
 
 const { getChiquitoIpsum } = require('./chiquito-ipsum')
 
@@ -9,4 +10,4 @@ app.get('/:paras?/:mode?', function ({ params: { mode, paras } }, res) {
   res.send(getChiquitoIpsum({ mode, paras }))
 })
 
-app.listen(port, () => console.log(`Chiquito ipsum listening on port ${80}!`))
+app.listen(app.get('port'), () => console.log(`Chiquito ipsum listening on port ${app.get('port')}!`))
