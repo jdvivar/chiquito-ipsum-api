@@ -5,7 +5,12 @@ app.set('port', (process.env.PORT || 8080));
 
 const { getChiquitoIpsum } = require('./chiquito-ipsum')
 
-app.get('/:paras?/:mode?', function ({ params: { mode, paras } }, res) {
+// lets encrypt SSL challenge
+app.get('/.well-known/acme-challenge/cXANg-kM3-jHuTEOwKH9aTdnmdJCnoxXzP7EJ4KRvjE', (req, res) => {
+  res.send('cXANg-kM3-jHuTEOwKH9aTdnmdJCnoxXzP7EJ4KRvjE.ZUoB_lKixHrWHx0bNSPzgYoDu5RT0OwEmqvnjNLo_0Q')
+})
+
+app.get('/:paras?/:mode?', ({ params: { mode, paras } }, res) => {
   console.log(`received a request with mode ${mode} and ${paras}`)
   if (paras > 10) {
     console.warn("API doesn't allow more than 10 paragraphs")
