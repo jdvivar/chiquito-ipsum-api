@@ -1,20 +1,24 @@
 {
   "name": "chiquito-ipsum-api",
-  "version": "1.0.0",
+  "version": "2.0.0",
   "description": "Chiquito ipsum api",
   "main": "index.js",
   "scripts": {
-    "start": "node index.js",
-    "lint": "standard"
+    "start": "netlify dev",
+    "lint": "standard",
+    "prebuild": "npm run lint",
+    "build": "netlify build"
   },
   "keywords": [],
   "author": "Daniel Vivar (http://www.danielvivar.com)",
   "license": "MIT",
-  "dependencies": {
-    "cors": "^2.8.5",
-    "express": "^4.17.1"
-  },
   "devDependencies": {
-    "standard": "^14.3.1"
+    "netlify-cli": "^12.0.9",
+    "standard": "^17.0.0"
+  },
+  "standard": {
+    "ignore": [
+      "/chiquito-ipsum.js"
+    ]
   }
 }

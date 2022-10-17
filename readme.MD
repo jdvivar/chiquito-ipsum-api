@@ -6,7 +6,7 @@ This ultra simple API has been designed following the exact same diodeno feature
 
 ## API
 
-```GET https://chiquito-ipsum.herokuapp.com/<PARAGRAPHS>/<MODE>```
+```GET https://chiquito-ipsum.netlify.app/<PARAGRAPHS>/<MODE>```
 
 Parameters | default | description
 -----------|---------|------------
@@ -15,16 +15,16 @@ Parameters | default | description
 
 ### Examples
 
-```https://chiquito-ipsum.herokuapp.com```
+```https://chiquito-ipsum.netlify.app```
  
 This will just return 1 HTML paragraph in fistrum default mode por la gloria de mi madre
 
 
-```https://chiquito-ipsum.herokuapp.com/2```
+```https://chiquito-ipsum.netlify.app/2```
 
 This will return 2 HTML paragraphs in fistrum default mode, pero tenga cuidadito
 
-```https://chiquito-ipsum.herokuapp.com/2/latin```
+```https://chiquito-ipsum.netlify.app/2/latin```
 
 This will return 2 HTML paragraphs in latin mode
 
@@ -32,7 +32,7 @@ This will return 2 HTML paragraphs in latin mode
 
 ```js
 const agramenauer = async () => {
-  const response = await fetch('https://chiquito-ipsum.herokuapp.com');
+  const response = await fetch('https://chiquito-ipsum.netlify.app');
   const html = await response.text()
   return html
 }
