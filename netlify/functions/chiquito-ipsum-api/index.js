@@ -15,7 +15,8 @@ const handler = async event => {
       statusCode: 200,
       body: getChiquitoIpsum({ mode, paras }),
       headers: {
-        'content-type': 'text/html; charset=UTF-8'
+        'content-type': 'text/html; charset=UTF-8',
+        'Access-Control-Allow-Origin': '*'
       }
     }
   } catch (error) {
